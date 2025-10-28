@@ -1,0 +1,2 @@
+Artificial Intelligence (AI) is the field of computer science that focuses on creating machines capable of intelligent behavior.
+Machine learning is a subset of AI that enables systems to learn from data.

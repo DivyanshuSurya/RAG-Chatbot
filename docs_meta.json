@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "text": "Artificial Intelligence (AI) is the field of computer science that focuses on creating machines capable of intelligent behavior.\nMachine learning is a subset of AI that enables systems to learn from data.\n",
+    "meta": {
+      "source": "info.txt",
+      "chunk": 0
+    }
+  },
+  {
+    "id": 1,
+    "text": "Python is a versatile programming language often used for AI, web development, and data analysis.\n",
+    "meta": {
+      "source": "python.txt",
+      "chunk": 0
+    }
+  }
+]
