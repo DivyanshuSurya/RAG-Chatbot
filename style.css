@@ -11,10 +11,12 @@ body {
   height: 100vh;
   background: radial-gradient(circle at 20% 20%, #101115, #050505 80%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #e9e9e9;
   overflow: hidden;
+  padding: 10px; /* Add padding for better spacing on small screens */
 }
 
 /* ========== CHAT WRAPPER ========== */
@@ -140,6 +142,8 @@ body {
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: all 0.25s ease;
+  min-width: 48px; /* Ensure touch-friendly size */
+  min-height: 48px; /* Ensure touch-friendly size */
 }
 
 .chat-input button:hover {
@@ -158,6 +162,10 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
   letter-spacing: 0.5px;
+  margin-top: 10px; /* Space between chat and footer */
+  width: 420px;
+  max-width: 95%;
+  border-radius: 10px;
 }
 
 .footer span {
@@ -201,4 +209,39 @@ body {
   .chat-header h2 {
     font-size: 1.2rem;
   }
+  .chat-input button {
+    padding: 14px 20px; /* Larger touch targets for mobile */
+    min-width: 52px;
+    min-height: 52px;
+  }
+  .chat-input input {
+    padding: 14px; /* Slightly larger for easier typing on mobile */
+  }
+  .footer {
+    width: 94%;
+    font-size: 0.75rem;
+  }
+}
+
+/* Additional Android-friendly tweaks */
+@media (max-width: 768px) and (orientation: portrait) {
+  .chat-container {
+    height: 85vh; /* Adjust for portrait Android devices, leaving space for footer */
+  }
+  .chat-box {
+    padding: 0.8rem; /* Reduce padding slightly for more space */
+  }
+  body {
+    padding: 5px; /* Reduce body padding for tighter fit */
+  }
+}
+
+/* Ensure smooth scrolling on Android */
+.chat-box {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent zoom on input focus for Android */
+.chat-input input {
+  font-size: 16px; /* Prevents zoom on iOS/Android when focusing input */
 }
